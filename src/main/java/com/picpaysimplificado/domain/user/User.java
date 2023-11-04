@@ -1,5 +1,7 @@
 package com.picpaysimplificado.domain.user;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,5 +36,18 @@ public class User {
 	private String email;
 	
 	private UserType userType;
+
+	public UserType getUserType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public BigDecimal getBalance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
 	
 }
