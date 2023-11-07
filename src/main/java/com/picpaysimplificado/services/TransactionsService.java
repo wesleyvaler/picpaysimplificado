@@ -26,11 +26,11 @@ public class TransactionsService {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	public void createTransaction(TransactionDTO transaction) throws Exception {
+	public Transaction createTransaction(TransactionDTO transaction) throws Exception {
 		User sender = this.userService.findUserById(transaction.senderId());
 		User receiver = this.userService.findUserById(transaction.receiverId());
 		
-		userService.ValidateTransaction(sender, transaction.value());
+		userService.ValidadeTransaction(sender, transaction.value());
 		
 		 boolean isAuthored = this.authorizeTransaction(sender, transaction.value());
 	        if (!isAuthored) {
