@@ -13,6 +13,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "users")
@@ -20,21 +21,31 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class User {
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     private String Name;
+    
     private String lastName;
+    
     @Column(unique = true)
     private String Doccument;
+    
     @Column(unique = true)
     private String email;
+    
     private String passoword;
+    
     private BigDecimal Balance;
+    
     @Enumerated(EnumType.STRING)
     private UserType userType;
+    
 	public UserType getUserType() {
 		// TODO Auto-generated method stub
 		return null;
@@ -43,7 +54,5 @@ public class User {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
 
 }
