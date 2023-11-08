@@ -2,6 +2,7 @@ package com.picpaysimplificado.services;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.github.wesleyvaler.domain.user.User;
 import com.picpaysimplificado.domain.transaction.Transaction;
+import com.picpaysimplificado.domain.user.User;
 import com.picpaysimplificado.dto.TransactionDTO;
+import com.picpaysimplificado.repository.TransactionRepository;
 
 @Service
 public class TransactionsService {
@@ -20,13 +22,13 @@ public class TransactionsService {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private TransactionsService repository;
+    @Autowired
+    private TransactionRepository repository;
 	
 	@Autowired
-	RestTemplate restTemplate;
+	private RestTemplate restTemplate;
 	
-	public Transaction createTransaction(TransactionDTO transaction) throws Exception {
+	public <Transaction> Transaction createTransaction(TransactionDTO transaction) throws Exception {
 		User sender = this.userService.findUserById(transaction.senderId());
 		User receiver = this.userService.findUserById(transaction.receiverId());
 		
@@ -64,6 +66,10 @@ public class TransactionsService {
 	            return "Autorizado".equalsIgnoreCase(message);
 	        }
 	        return false;
-
-	    }
+	   }
+	    
+	    public List<Transaction> findAll() {
+	        return this.repository.findAll();
 	}
+
+}

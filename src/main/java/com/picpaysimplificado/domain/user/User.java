@@ -38,13 +38,13 @@ public class User {
     private String firstName;
     
     @Column(unique = true)
-    private String Doccument;
+    private String document;
     
     @Column(unique = true)
     private String email;
     
     
-    private String passoword;
+    private String password;
     
     private BigDecimal Balance;
     
@@ -63,9 +63,9 @@ public class User {
     public User(UserDTO date){
         this.firstName = date.firstName();
         this.userType = date.userType();
-        this.passoword = date.password();
+        this.password = date.password();
         this.email = date.email();
         this.Balance = date.Balance();
-        this.Doccument = date.document();
+        this.document = date.document();
     }
 }
