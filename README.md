@@ -2,7 +2,7 @@
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+
 
 O PicPay Simplificado é uma aplicação financeira para transferência de recursos que conecta usuários comuns e comerciantes. As transações são realizadas com segurança, através da validação do CPF, do e-mail e da verificação do saldo do usuário.
 
