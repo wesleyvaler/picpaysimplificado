@@ -11,9 +11,6 @@ import com.picpaysimplificado.domain.user.UserType;
 import com.picpaysimplificado.dto.UserDTO;
 import com.picpaysimplificado.repository.UserRepository;
 
-
-
-
 @Service
 public class UserService {
 
@@ -42,7 +39,6 @@ public class UserService {
         this.saveUser(newUser);
         return newUser;
     }
-
 
     public List<User> getAllUsers() {
             return this.repository.findAll();
