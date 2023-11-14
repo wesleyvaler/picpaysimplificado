@@ -28,7 +28,7 @@ public class TransactionsService {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	public <Transaction> Transaction createTransaction(TransactionDTO transaction) throws Exception {
+	public Transaction createTransaction(TransactionDTO transaction) throws Exception {
 		User sender = this.userService.findUserById(transaction.senderId());
 		User receiver = this.userService.findUserById(transaction.receiverId());
 		
@@ -38,6 +38,7 @@ public class TransactionsService {
 	        if (!isAuthored) {
 	            throw new Exception("Transação não Autorizada");
 	        }
+	        
 	        Transaction newtransaction = new Transaction();
 	        newtransaction.setAmount(transaction.value());
 	        newtransaction.setSender(sender);

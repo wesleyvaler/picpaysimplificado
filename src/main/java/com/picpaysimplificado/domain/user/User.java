@@ -42,30 +42,22 @@ public class User {
     
     @Column(unique = true)
     private String email;
-    
-    
+        
     private String password;
     
-    private BigDecimal Balance;
+    private BigDecimal balance;
     
     @Enumerated(EnumType.STRING)
     private UserType userType;
-    
-	public UserType getUserType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public BigDecimal getBalance() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-    public User(UserDTO date){
-        this.firstName = date.firstName();
-        this.userType = date.userType();
-        this.password = date.password();
-        this.email = date.email();
-        this.Balance = date.Balance();
-        this.document = date.document();
+    public User(UserDTO data){
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
+        this.balance = data.balance();
+        this.userType = data.userType();
+        this.password = data.password();
+        this.document = data.document();
+        this.email = data.email();
     }
+    
 }
