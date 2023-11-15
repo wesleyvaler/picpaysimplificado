@@ -16,22 +16,15 @@ import com.picpaysimplificado.dto.TransactionDTO;
 import com.picpaysimplificado.services.TransactionsService;
  
 
-    @RestController()
-    @RequestMapping("/transactions")
+@RestController
+@RequestMapping("/transactions")
+public class TransactionController {
+    @Autowired
+    private TransactionsService transactionService;
 
-    public class TransactionController {
-
-    	@Autowired
-        private TransactionsService transactionsService;
-
-        @PostMapping
-        public Transaction CreateTransactions(@RequestBody TransactionDTO transaction) throws Exception {
-            Transaction newTransactions = transactionsService.createTransaction(transaction);
-            return new ResponseEntity<>(newTransactions, HttpStatus.CREATED).getBody();
-        }
-        @GetMapping
-        public ResponseEntity<List<Transaction>> getAllTransactions(){
-            List<Transaction> transactions = this.transactionsService.findAll();
-            return new ResponseEntity<>(transactions, HttpStatus.OK);
-        }
+    @PostMapping
+    public ResponseEntity<Transaction> createTransaction(@RequestBody TransactionDTO transaction) throws Exception {
+        Transaction newTransaction = this.transactionService.createTransaction(transaction);
+        return new ResponseEntity<>(newTransaction, HttpStatus.OK);
     }
+}

@@ -38,13 +38,12 @@ public class Transaction {
     @JoinColumn(name = "receiver.id")
     private User receiver;
     private LocalDateTime timesLocalDateTime;
-    
-    
-    
+      
     
 	public Transaction() {
 		super();
 	}
+	
 	public Transaction(long id, BigDecimal amount, User sender, User receiver, LocalDateTime timesLocalDateTime) {
 		super();
 		Id = id;
@@ -53,36 +52,43 @@ public class Transaction {
 		this.receiver = receiver;
 		this.timesLocalDateTime = timesLocalDateTime;
 	}
+	
 	public long getId() {
 		return Id;
 	}
 	public void setId(long id) {
 		Id = id;
 	}
+	
 	public BigDecimal getAmount() {
 		return amount;
 	}
+	
 	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
+	
 	public User getSender() {
 		return sender;
 	}
+	
 	public void setSender(User sender) {
 		this.sender = sender;
 	}
+	
 	public User getReceiver() {
 		return receiver;
 	}
+	
 	public void setReceiver(User receiver) {
 		this.receiver = receiver;
 	}
+	
 	public LocalDateTime getTimesLocalDateTime() {
 		return timesLocalDateTime;
 	}
+	
 	public void setTimesLocalDateTime(LocalDateTime timesLocalDateTime) {
 		this.timesLocalDateTime = timesLocalDateTime;
 	}
-    
-
 }
