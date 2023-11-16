@@ -60,10 +60,14 @@ public class User {
         this.email = data.email();
     }
 
+
+
 	public User(long l, String string, String string2, String string3, String string4, String string5,
 			BigDecimal bigDecimal, UserType common) {
 		// TODO Auto-generated constructor stub
 	}
+
+
 
 	public long getId() {
 		return id;

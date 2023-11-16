@@ -39,10 +39,7 @@ public class Transaction {
     private User receiver;
     private LocalDateTime timesLocalDateTime;
       
-    
-	public Transaction() {
-		super();
-	}
+   
 	
 	public Transaction(long id, BigDecimal amount, User sender, User receiver, LocalDateTime timesLocalDateTime) {
 		super();

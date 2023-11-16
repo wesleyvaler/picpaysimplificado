@@ -6,7 +6,6 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
 
-
 import java.math.BigDecimal;
 
 import org.assertj.core.api.Assertions;
@@ -24,7 +23,7 @@ import com.picpaysimplificado.dto.TransactionDTO;
 import com.picpaysimplificado.repository.TransactionRepository;
 
 
-public class TransactionServiceTests {
+class TransactionServiceTests {
 	
     @Mock
     @Autowired

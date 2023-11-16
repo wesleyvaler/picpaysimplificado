@@ -35,7 +35,7 @@ public class TransactionsService {
             throw new Exception("Transação não autorizada");
         }
 
-        Transaction newTransaction = new Transaction();
+        Transaction newTransaction = new Transaction(0, null, receiver, receiver, null);
         newTransaction.setAmount(transaction.value());
         newTransaction.setSender(sender);
         newTransaction.setReceiver(receiver);
