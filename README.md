@@ -5,6 +5,8 @@
 ![H2 Database](https://img.shields.io/badge/h2-database-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Junit](https://img.shields.io/badge/Junit-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Mockito](https://img.shields.io/badge/Mockito-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+
 
 
 
@@ -12,4 +14,7 @@ O sistema "PicPay Simplificado" é uma aplicação financeira voltada para a tra
 
 O processo de desenvolvimento dessa aplicação foi uma verdadeiro desafio! Encarei alguns bugs com o Lombok e a injeção de dependências, e confesso que, no início, entender o StackTrace foi um pouco complicado. Mas com o tempo, fui pegando o jeito e me acostumando a lidar com os bugs. A tarefa de ajustar versões e alinhar dependências no pom.xml também foi processo complexo, mas aprendi bastante durante o proceso. Esses bugs não só me mostraram a importância da consistência nas dependências, mas também lapidou minhas habilidades de debugging. 
 
-No desenvolvimento da aplicação utilizei JUnit e Mockito para realizar testes nas classes fundamentais: "UserService" e "UserRepository". Esses testes foram essenciais para garantir a integridade das operações e assegurar a correta persistência dos dados no banco. Essa prática não só contribuiu para a qualidade do código, mas também fortaleceu a segurança do sistema, identificando e corrigindo possíveis problemas antes da implementação em produção. 
+No desenvolvimento da aplicação utilizei JUnit e Mockito para realizar testes nas classes fundamentais: "UserService" e "UserRepository". Esses testes foram essenciais para garantir a integridade das operações e assegurar a correta persistência dos dados no banco. Essa prática não só contribuiu para a qualidade do código, mas também fortaleceu a segurança do sistema, identificando e corrigindo possíveis problemas antes da implementação em produção.
+
+Utilizei o Swagger para gerar a documentação que serve como um guia para aplicação, simplificando o entendimento da API e otimizando o tempo de desenvolvimento, oferecendo um mapa claro para manutenções e expansões futuras da aplicação.
+
